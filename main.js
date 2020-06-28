@@ -17,7 +17,7 @@ client.on("ready", async function() {
   var list = [
     `Use my Prefix ${process.env.PREFIX}`,
     `On ${client.guilds.size} servers `,
-`A Cloud Bot`
+`COD MOBILE`
   ];
   setInterval(function() {
     const Exec = Math.floor(Math.random() * list.length);
