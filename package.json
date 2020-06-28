@@ -1,0 +1,29 @@
+{
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "cloud.js",
+  "scripts": {
+    "start": "node cloud.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "ascii-table": "^0.0.9",
+    "common-tags": "^1.8.0",
+    "dotenv": "^8.2.0",
+    "fs": "^0.0.2",
+    "ms": "^2.1.2"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": ""
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
