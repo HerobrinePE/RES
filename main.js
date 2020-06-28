@@ -7,28 +7,9 @@ client.login(process.env.TOKEN);
 client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
- client.on("message", message =>{
-   if (message.content == "+verify"){
-       if(message.channel.id == "713728062931337236") {
-      message.member.addRole("713544880747577354")
-  message.author.send("verified Sucessfully").then(()=>{
-     message.delete()
-     })
-     }else{
-       message.delete()
-       var ren = message.author.send("Your not in the Verification channel or user verified sucessfully").then(()=>{
-         ren.react("❌")
-       })
-       }
-   } else {
-    if(message.channel.id == "713728062931337236") {
-   if (message.content !== "+verify")
-     message.delete()
-   }else{
-     
-    }
-   }
- })
+/*
+
+ */
 ["command"].forEach(handler => {
   require(`./handlers/${handler}`)(client);
 });
@@ -75,3 +56,25 @@ client.on("guildDelete", guild => {
     client.login(process.env.TOKEN);
   }, 3000);
 });
+ client.on("message", message =>{
+   if (message.content == "+verify"){
+       if(message.channel.id == "713728062931337236") {
+      message.member.addRole("713544880747577354")
+  message.author.send("verified Sucessfully").then(()=>{
+     message.delete()
+     })
+     }else{
+       message.delete()
+       var ren = message.author.send("Your not in the Verification channel or user verified sucessfully").then(()=>{
+         ren.react("❌")
+       })
+       }
+   } else {
+    if(message.channel.id == "713728062931337236") {
+   if (message.content !== "+verify")
+     message.delete()
+   }else{
+     
+    }
+   }
+ })
